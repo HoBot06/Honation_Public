@@ -51,15 +51,11 @@ public class Honation extends JavaPlugin{
 		AfreecaTvTimer afreecaTvTimer = new AfreecaTvTimer();
 		afreecaTvTimer.runTaskTimerAsynchronously(this, 0, 20*600L);
 		
-//		CmdTimer cmdTimer = new CmdTimer();
-//		cmdTimer.runTaskTimer(this, 0, 5L);
-		
 		try {
 			VarUtil.httpStart();
 			VarUtil.Afreeca_httpClient.start();
 			VarUtil.Chzzk_httpClient.start();
 			VarUtil.Tonation_httpClient.start();
-			//LogUtil.info("Client 시작");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -86,7 +82,6 @@ public class Honation extends JavaPlugin{
 			VarUtil.Afreeca_httpClient.stop();
 			VarUtil.Chzzk_httpClient.stop();
 			VarUtil.Tonation_httpClient.stop();
-			//LogUtil.info("Client 종료");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
